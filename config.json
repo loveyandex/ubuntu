@@ -1,0 +1,333 @@
+{
+  "log": null,
+  "routing": {
+    "rules": [
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  },
+  "dns": null,
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "api",
+      "sniffing": null
+    },
+    {
+      "listen": null,
+      "port": 48825,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "ade6a0b1-2477-43fb-c6cf-c7c1f697d01b",
+            "email": "YKzS.love@xray.com"
+          },
+          {
+            "id": "42857ff7-8771-4fbf-dfd0-af20e3572768",
+            "email": "ktiJ.love@xray.com"
+          },
+          {
+            "id": "9c38206d-98f2-11ed-bd6a-086266b91775"
+          },
+          {
+            "id": "ec01be3b-98f2-11ed-ae78-086266b91775"
+          },
+          {
+            "id": "824f8deb-98f7-11ed-8978-086266b91775"
+          },
+          {
+            "id": "b4e7ae9a-98f7-11ed-8550-086266b91775"
+          },
+          {
+            "id": "ea7ea8bb-98f7-11ed-b10e-086266b91775"
+          },
+          {
+            "id": "a2338595-98f8-11ed-bbe0-086266b91775"
+          },
+          {
+            "id": "9e904bbc-98fe-11ed-b053-086266b91775"
+          },
+          {
+            "id": "cc42e5a2-9901-11ed-adad-086266b91775"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "x.y.z.crmocean.ir",
+          "minVersion": "1.2",
+          "maxVersion": "1.3",
+          "cipherSuites": "",
+          "certificates": [
+            {
+              "certificateFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/privkey.pem"
+            }
+          ],
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {},
+          "acceptProxyProtocol": false
+        }
+      },
+      "tag": "inbound-48825",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 24600,
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "password": "lMpfoCXe4t",
+            "email": "IQ7z.love@xray.com",
+            "flow": ""
+          },
+          {
+            "password": "W3VosDiXi6",
+            "email": "OWQd.love@xray.com",
+            "flow": ""
+          },
+          {
+            "password": "ktiGXvjcG0",
+            "email": "JbbS.love@xray.com",
+            "flow": ""
+          }
+        ],
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "xtls",
+        "xtlsSettings": {
+          "serverName": "x.y.z.crmocean.ir",
+          "minVersion": "1.2",
+          "maxVersion": "1.3",
+          "cipherSuites": "",
+          "certificates": [
+            {
+              "certificateFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/privkey.pem"
+            }
+          ],
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          },
+          "acceptProxyProtocol": false
+        }
+      },
+      "tag": "inbound-24600",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 57258,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "5b1e2815-60b7-4f5a-8093-263afdd7a5b1",
+            "email": "VMeq.love@xray.com",
+            "alterId": 0
+          }
+        ],
+        "disableInsecureEncryption": false
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "x.y.z.crmocean.ir",
+          "minVersion": "1.2",
+          "maxVersion": "1.3",
+          "cipherSuites": "",
+          "certificates": [
+            {
+              "certificateFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/privkey.pem"
+            }
+          ],
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "wsSettings": {
+          "path": "/graphql",
+          "headers": {},
+          "acceptProxyProtocol": false
+        }
+      },
+      "tag": "inbound-57258",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 4433,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "aa858ee4-98fe-11ed-b053-086266b91775",
+            "email": "QhjI.love@xray.com",
+            "alterId": 0
+          }
+        ],
+        "disableInsecureEncryption": false
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "x.y.z.crmocean.ir",
+          "minVersion": "1.2",
+          "maxVersion": "1.3",
+          "cipherSuites": "",
+          "certificates": [
+            {
+              "certificateFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/x.y.z.crmocean.ir/privkey.pem"
+            }
+          ],
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "wsSettings": {
+          "path": "/graphql",
+          "headers": {},
+          "acceptProxyProtocol": false
+        }
+      },
+      "tag": "inbound-4433",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 28859,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "44f5a5a5-244c-4b12-a48d-a0298a4d4187",
+            "email": "tiEr.love@xray.com",
+            "alterId": 0
+          }
+        ],
+        "disableInsecureEncryption": false
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          },
+          "acceptProxyProtocol": false
+        }
+      },
+      "tag": "inbound-28859",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "transport": null,
+  "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    }
+  },
+  "api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "stats": {},
+  "reverse": null,
+  "fakeDns": null
+}
